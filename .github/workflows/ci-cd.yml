@@ -41,10 +41,10 @@ jobs:
         s3-filename: [ 'staging-aws-codedeploy-try-${{ github.sha }}' ]
 
           # Initialize Node.js
-      - name: Install Node.js [16.13]
+      - name: Install Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: [16.13]
+          node-version: [ '12.x' ]
 
             # Install project dependencies and build
       - name: Install dependencies
