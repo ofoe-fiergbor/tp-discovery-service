@@ -40,10 +40,6 @@ jobs:
         s3-bucket: [ 'aws-codedeploy-deployments-try' ]
         s3-filename: [ 'staging-aws-codedeploy-try-${{ github.sha }}' ]
 
-    needs: buildAndTest
-    steps:
-      - uses: actions/checkout@v2
-
           # Initialize Node.js
       - name: Install Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
