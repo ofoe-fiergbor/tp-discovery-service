@@ -40,12 +40,6 @@ jobs:
         s3-bucket: [ 'aws-codedeploy-deployments-try' ]
         s3-filename: [ 'staging-aws-codedeploy-try-${{ github.sha }}' ]
 
-            # Install project dependencies and build
-      - name: Install dependencies
-        run: npm install
-      - name: Run build
-        run: npm run build
-
     steps:
       - uses: actions/checkout@v2
       - name: Set up JDK 11
