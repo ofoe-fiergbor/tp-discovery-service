@@ -40,12 +40,6 @@ jobs:
         s3-bucket: [ 'aws-codedeploy-deployments-try' ]
         s3-filename: [ 'staging-aws-codedeploy-try-${{ github.sha }}' ]
 
-          # Initialize Node.js
-      - name: Install Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: [ '12.x' ]
-
             # Install project dependencies and build
       - name: Install dependencies
         run: npm install
