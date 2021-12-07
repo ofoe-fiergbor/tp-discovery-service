@@ -93,6 +93,6 @@ jobs:
          HOST: "3.140.252.172"
          USERNAME: "ec2-user"
          PORT: "22"
-         KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+         KEY: ${{ secrets.AWS_SUPERVISOR_KEY }}
          script: |
           sudo supervisorctl restart all
