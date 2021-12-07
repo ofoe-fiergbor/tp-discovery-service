@@ -87,12 +87,12 @@ jobs:
            --s3-location bucket=aws-codedeploy-deployments-try,key=staging-aws-codedeploy-dc1ad63e3952d6515378dedcc10a91f123544abd.zip,bundleType=zip \
 
 
-       - name: Restart supervisor
-         uses: appleboy/ssh-action@master
-         with:
-          HOST: "3.140.252.172"
-          USERNAME: "ec2-user"
-          PORT: "22"
-          KEY: "${{ secrets.AWS_SECRET_ACCESS_KEY }}"
-          script: |
-           sudo supervisorctl restart all
+      - name: Restart supervisor
+        uses: appleboy/ssh-action@master
+        with:
+         HOST: "3.140.252.172"
+         USERNAME: "ec2-user"
+         PORT: "22"
+         KEY: "${{ secrets.AWS_SECRET_ACCESS_KEY }}"
+         script: |
+          sudo supervisorctl restart all
