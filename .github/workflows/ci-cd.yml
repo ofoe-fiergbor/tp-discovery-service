@@ -94,7 +94,8 @@ jobs:
          USERNAME: "ec2-user"
          PORT: "22"
          KEY:
-          "MIIEpAIBAAKCAQEAr1HLMelzkovj9fX9USM+l0wk0KQRO6TCKZ+9iITupcWZ1TSh
+          "-----BEGIN RSA PRIVATE KEY-----
+           MIIEpAIBAAKCAQEAr1HLMelzkovj9fX9USM+l0wk0KQRO6TCKZ+9iITupcWZ1TSh
            nu0Ho9TyV+UhhRkvA3Out8Kx1lN50zVZT0smsB2nYby380/OCyCp7o/Wf8AkO9iw
            1q14wkfFCoKzz28gsatZJAijXxnW5wpkU10D2pV1JsTD/0C1KO0B0NupUvpzUbP9
            PAaeRDb1u3kZjzXAK2lLNIQuBW4+oG61ATj3KI7VqksfmrxOwNmH35A11VPLemkB
@@ -118,6 +119,7 @@ jobs:
            hWOekaqnFWNUX7QG8aMbfjvI9UOHvmFeFuof2JCvUFVekMYkE9CcoZvPOitN4Lvf
            mW1syQKBgQCcLD44/Dju34lTXT+BPWMpu/FqXwtqec5OLmuVowXKJH4ZYHvBbA6J
            Cgp4eiZ6Lqv5Nez0fFjRyUhEyfonJ43u5dH+XnhhkBvnOZ6z1WOODQC2AVDr0Y85
-           hUEVq+tdduGwQWx51WbzY6Uz6tRFWquTBN3TwsVKY4VDrqslmZ8Q1A=="
+           hUEVq+tdduGwQWx51WbzY6Uz6tRFWquTBN3TwsVKY4VDrqslmZ8Q1A==
+           -----END RSA PRIVATE KEY-----"
          script: |
           sudo supervisorctl restart all
