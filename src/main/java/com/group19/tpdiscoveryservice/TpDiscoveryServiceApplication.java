@@ -14,7 +14,7 @@ public class TpDiscoveryServiceApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(TpDiscoveryServiceApplication.class, args);
 	}
-	@RequestMapping(value = "/")
+	@RequestMapping(value = "/test")
 	public String home() {
 		return "Eureka Client application";
 	}
