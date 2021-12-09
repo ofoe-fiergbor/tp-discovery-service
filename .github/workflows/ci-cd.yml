@@ -91,35 +91,8 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
          HOST: "3.140.252.172"
-         USERNAME: "ec2-user"
+         USERNAME: "ubuntu"
          PORT: "22"
-         KEY:
-          "-----BEGIN RSA PRIVATE KEY-----
-           MIIEpAIBAAKCAQEAr1HLMelzkovj9fX9USM+l0wk0KQRO6TCKZ+9iITupcWZ1TSh
-           nu0Ho9TyV+UhhRkvA3Out8Kx1lN50zVZT0smsB2nYby380/OCyCp7o/Wf8AkO9iw
-           1q14wkfFCoKzz28gsatZJAijXxnW5wpkU10D2pV1JsTD/0C1KO0B0NupUvpzUbP9
-           PAaeRDb1u3kZjzXAK2lLNIQuBW4+oG61ATj3KI7VqksfmrxOwNmH35A11VPLemkB
-           +UQ2s/XW1r2Pc/z2ZKYULUJqNXu5grW47MA5lmbL2Kg+KEFzzn8Uq+r4SoIDxRVO
-           v0nYr1+lmIcx+Ye3bw7sCw3eUxy8qz2ozRQ94wIDAQABAoIBADu1b66gA2x1mD28
-           eXmYt0hv9lnYhsX5ZucmMDa+j0iF885ZDnJB58g0ThUBRFlAKnLSgz6yYD7OTz9P
-           fAs1XQe+EbOHwl5rX5EKntVQx4zas3xuYEu86NPB/amGuhZ7knbwFHvhNUK+WiJ1
-           t5VsqFNZc3ywps/YCdrWXTf0l8ZaVSl2G+CPMop1hZvvm8Tqz/aUNAkdK+x1W+7E
-           +FDP8QRZTC9JZKvXB2OKwDsrtFKAuRyqFax3UMkG6RwCHRcM5GXj+MvrKjxqqZlq
-           ITdEVuXs8o+Tji5vIcJRURnKw69o9YLuO/U5SC8/JESBEEc1Yr/yarOwxVju0ood
-           FWVhvoECgYEA4rEn1vPMeRA1y1nywPP6agIEzRPDg+vNgNay2j7b3bEuDRrleQh2
-           QiGjLQCmY9Rra5IiMwYfIJxjiUh7cupeNn31o6lgRfKiplkajK9dWZd5GLOEyRqA
-           5k90jfQd+CBmgTxEp1VgSvXX3aW/Al4TI7qqTGGx9z7G+RNbaQorKXcCgYEAxfxb
-           pBhjCHbk52HU/BBrulf0+pSJAJuKQa+qJ/OiQ0IKhsOiWRGuP1VqbeNdQWqNlhLQ
-           mXj1xYaxG8pSVvkUzOYK7R8W7DPtYDDnZGDsh8rET+eXdn++iChjTp6GAp3xPt2O
-           DTk4rV/kaiGzNe9wbOwfIkCgEM8aW59pgOFKqfUCgYBT5Pg3htZ/X05pSYqbei+M
-           l96q/st2wQe2zL44Itc/vliqpO+T0VvisYwwFXN+sphmoRhjBbrzWK1FmzuEldP0
-           Gr2TqhVlDZzAL22x7xx/EZ3RVG6p9lMJ6RHbjyKgN214GpPV0bTnSQBwmOyNtb8j
-           k+t+hRFVzTfZ6h4ES60ZlQKBgQDDWsCp6A4/2eD/ln7rwOArXIKzhkCwwsjnC4gg
-           J7wiFVYBp6PXsyR2BbggecoYtCTEwgfmh34qyz6Sp04b12Z4zzxUwOqDYrGEynxn
-           hWOekaqnFWNUX7QG8aMbfjvI9UOHvmFeFuof2JCvUFVekMYkE9CcoZvPOitN4Lvf
-           mW1syQKBgQCcLD44/Dju34lTXT+BPWMpu/FqXwtqec5OLmuVowXKJH4ZYHvBbA6J
-           Cgp4eiZ6Lqv5Nez0fFjRyUhEyfonJ43u5dH+XnhhkBvnOZ6z1WOODQC2AVDr0Y85
-           hUEVq+tdduGwQWx51WbzY6Uz6tRFWquTBN3TwsVKY4VDrqslmZ8Q1A==
-           -----END RSA PRIVATE KEY-----"
+         KEY: ${{ secrets.AWS_SUPERVISOR_KEY }}
          script: |
           sudo supervisorctl restart all
