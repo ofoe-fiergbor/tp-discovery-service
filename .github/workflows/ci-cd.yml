@@ -90,7 +90,7 @@ jobs:
       - name: Restart supervisor
         uses: appleboy/ssh-action@master
         with:
-         HOST: "3.140.252.172"
+         HOST: "3.19.219.186"
          USERNAME: "ubuntu"
          PORT: "22"
          KEY: ${{ secrets.AWS_SUPERVISOR_KEY }}

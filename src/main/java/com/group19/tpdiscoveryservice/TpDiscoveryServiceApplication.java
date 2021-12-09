@@ -1,5 +1,6 @@
 package com.group19.tpdiscoveryservice;
 
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
@@ -8,15 +9,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @EnableEurekaServer
-@RestController
-public class TpDiscoveryServiceApplication {
+public class TpDiscoveryServiceApplication implements CommandLineRunner {
 
 	public static void main(String[] args) {
 		SpringApplication.run(TpDiscoveryServiceApplication.class, args);
 	}
-	@RequestMapping(value = "/test")
-	public String home() {
-		return "Eureka Client application";
-	}
 
+
+	@Override
+	public void run(String... args) throws Exception {
+		System.out.println("running.....");
+	}
 }
