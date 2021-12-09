@@ -95,6 +95,5 @@ jobs:
          PORT: "22"
          KEY: ${{ secrets.AWS_SUPERVISOR_KEY }}
          script: |
-           cd /home/ubuntu/aws-codedeploy
-           mvn spring-boot:run
+           sudo apt update
            sudo supervisorctl restart all
