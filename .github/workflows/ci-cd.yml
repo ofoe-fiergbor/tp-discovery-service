@@ -95,5 +95,4 @@ jobs:
          PORT: "22"
          KEY: ${{ secrets.AWS_SUPERVISOR_KEY }}
          script: |
-           sudo apt update
            sudo supervisorctl restart all
